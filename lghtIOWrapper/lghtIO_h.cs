@@ -17,6 +17,6 @@ namespace lghtIOWrapper
     {
         public static int getLghtByIdx() => IOCTL_H._IOWR('q', 1, typeof(lghtIO_arg_t));
         public static int resetLghtByIdx() => IOCTL_H._IOWR('q', 2, typeof(lghtIO_arg_t));
-        public static int setLghtByIdx() => IOCTL_H._IOWR('q', 3, typeof(lghtIO_arg_t));
+        public static int setLghtByIdx() => IOCTL_H._IOW('q', 3, typeof(lghtIO_arg_t));
     }
 }
