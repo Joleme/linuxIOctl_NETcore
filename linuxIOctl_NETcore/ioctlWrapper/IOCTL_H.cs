@@ -48,7 +48,7 @@ namespace ioctlWrapper
 
         //#endif
 
-        public static int _IOC(int dir, int type, int nr, int size) => (int)((uint)((dir) << _IOC_DIRSHIFT) | (uint)((type) << _IOC_TYPESHIFT) | (uint)((nr) << _IOC_NRSHIFT) | (uint)((size) << _IOC_SIZESHIFT));
+        public static int _IOC(int dir, int type, int nr, int size) => (((dir) << _IOC_DIRSHIFT) | ((type) << _IOC_TYPESHIFT) | ((nr) << _IOC_NRSHIFT) | ((size) << _IOC_SIZESHIFT));
 
         public static int _IOC_TYPECHECK(Type t) => Marshal.SizeOf(t);
 
